@@ -1,0 +1,83 @@
+{% load static %}  <!-- Cargar la etiqueta static de Django -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú - Restaurante Michu</title>
+    <!-- Carga de archivos CSS -->
+    <link rel="stylesheet" href="{% static 'css/gestion_menu.css' %}">
+    <!-- Fuente de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Banner negro semitransparente -->
+    <div class="banner"></div>
+
+    <!-- Header con logo y botones a la derecha -->
+    <header>
+        <div class="logo">
+            <img src="{% static 'image/Logo.jpg.png' %}" alt="Logo Restaurante Michu">
+            <span class="restaurant-name">Restaurante Michu</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">INICIO</a></li>
+                <li><a href="#">MENÚ</a></li>
+                {% if user.is_authenticated %}
+                    <li><a href="#">RESERVACIONES</a></li>
+                    <li><a href="#">PEDIDOS</a></li>
+                {% endif %}
+                <!-- Redireccionar al login -->
+                <li><a href="{% url 'login' %}">INICIAR SESIÓN</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección Hero con la imagen de fondo -->
+    <main>
+        <section class="hero">
+            <img src="{% static 'image/Menu.jpg' %}" alt="Imagen del Menú" class="hero-image">
+            <h1>Descubre Nuestro Menú Exclusivo</h1>
+            <p>Elige entre nuestras deliciosas opciones, elaboradas con ingredientes frescos y de alta calidad.</p>
+            <button id="toggle-menu">VER MENÚ</button>
+        </section>
+
+        <!-- Sección de Categorías del Menú -->
+        <section class="menu-categories" id="menu-categories" style="display: none;">
+            <h2>Combos</h2>
+            <div class="category">
+                <div class="product">
+                    <h3>MEGA COMBO 1 ALITAS</h3>
+                    <p class="price">54.90</p>
+                    <p class="description">1 presa de pollo + 3 alitas + Ficentas + arroz + monestra *...</p>
+                </div>
+                <div class="product">
+                    <h3>SUPER COMBO 2</h3>
+                    <p class="price">54.90</p>
+                    <p class="description">2 presas de pollo + arroz y monestra + escalada nista + L...</p>
+                </div>
+                <!-- Agrega más productos aquí -->
+            </div>
+
+            <h2>Exclusivo en Web</h2>
+            <div class="category">
+                <div class="product">
+                    <h3>COMBO COMPLETO 5.00</h3>
+                    <p class="price">53.00</p>
+                    <p class="description">2 presas de pollo + 1 papa feta + peq + 1 gasonoa 35/ini</p>
+                </div>
+                <div class="product">
+                    <h3>TESTIM IDEAL PROVO WEB</h3>
+                    <p class="price">53.00</p>
+                    <p class="description">IP PRESSO DE POLLO RFC + 1 POP COMB MEGADO + PAPA FIETA...</p>
+                </div>
+                <!-- Agrega más productos aquí -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Carga de archivos JS -->
+    <script src="{% static 'js/gestion_menu.js' %}"></script>
+</body>
+</html>
