@@ -1,7 +1,7 @@
 # API Menuboard
 Investigación e integración de un API público para aplicaciones de restaurantes.
 
-# API Menuboard
+# Autores
 - Arelys Anahi Ajila Apolo.
 - Douglas Andrey Carreño Pardo.
 - Viviana Elizabeth Córdova Celi.
