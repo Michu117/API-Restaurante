@@ -1,6 +1,13 @@
 # API Menuboard
 Investigación e integración de un API público para aplicaciones de restaurantes.
 
+# API Menuboard
+- Arelys Anahi Ajila Apolo.
+- Douglas Andrey Carreño Pardo.
+- Viviana Elizabeth Córdova Celi.
+- Fabricio Josue Ruiz Aguilar.
+- Maria del Cisne Valarezo Román.
+
 # APIs Investigadas
 
 ## 1. OpenWeather - Weather API 
@@ -86,6 +93,9 @@ TheMealDB es una API que proporciona acceso a una extensa base de datos de recet
 ExchangeRate-API ofrece acceso a tasas de cambio de divisas en tiempo real, permitiendo convertir cantidades entre diferentes monedas. Esta API es útil para restaurantes que reciben pagos internacionales o compran insumos de otros países, ya que permite realizar conversiones precisas de precios y costos en función de las tasas de cambio actuales.
 
 # Implementación y Funcionamiento
+
+Las APIs fueron implementadas en la App menu.
+
 ## TheMealsDB
 1. http://localhost:8000/menus/categorias/
 
@@ -164,3 +174,10 @@ Función encargada de convertir las monedas y mostrar el apartado de conversión
 ![image](https://github.com/user-attachments/assets/fa69b9ac-e4ee-44b3-ae2b-744fbef38a6f)
 
 En el ejemplo se puede visualizar como se convierte la moneda de origen USD "Dólar Estadounidense" con 100 de cantidad a la moneda de destino CLP "Peso Chileno" y se muestra en el Resultado final de 98295,74 CLP.
+
+# Archivos Importantes
+Las APIs fueron implementadas en la App menu.
+- [views.py](https://github.com/Michu117/API-Restaurante/blob/main/ProyectoRestaurante_MesasUnidas/ProyectoRestaurante_templateHome/menu/views.py)
+- [forms.py](https://github.com/Michu117/API-Restaurante/blob/main/ProyectoRestaurante_MesasUnidas/ProyectoRestaurante_templateHome/menu/forms.py)
+- [services.py](https://github.com/Michu117/API-Restaurante/blob/main/ProyectoRestaurante_MesasUnidas/ProyectoRestaurante_templateHome/menu/services.py)
+- [templates/api](https://github.com/Michu117/API-Restaurante/tree/main/ProyectoRestaurante_MesasUnidas/ProyectoRestaurante_templateHome/templates/api)
