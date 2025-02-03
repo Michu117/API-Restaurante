@@ -86,3 +86,81 @@ TheMealDB es una API que proporciona acceso a una extensa base de datos de recet
 ExchangeRate-API ofrece acceso a tasas de cambio de divisas en tiempo real, permitiendo convertir cantidades entre diferentes monedas. Esta API es útil para restaurantes que reciben pagos internacionales o compran insumos de otros países, ya que permite realizar conversiones precisas de precios y costos en función de las tasas de cambio actuales.
 
 # Implementación y Funcionamiento
+## TheMealsDB
+1. http://localhost:8000/menus/categorias/
+
+![image](https://github.com/user-attachments/assets/d5b99ad2-512a-4303-bdb7-d70b460433af)
+
+En este apartado se pueden observar todas las categorías.
+
+![image](https://github.com/user-attachments/assets/a2766f73-4c4e-4f93-bdb0-83ae028c6053)
+
+Es la función encargada de obtener las categorías directo desde la API.
+
+![image](https://github.com/user-attachments/assets/1b45a1bc-0e02-4779-a8c2-b39f7eafbaab)
+
+Es la función encargada de mostrar las categorías obtenidas directo desde la API.
+
+2. http://localhost:8000/menus/categorias/Dessert/
+
+![image](https://github.com/user-attachments/assets/321bb8db-cbcb-45d0-8c65-453d4acb051d)
+
+En este apartado se pueden observar todos los platos dentro de la categoría seleccionada.
+
+![image](https://github.com/user-attachments/assets/e52762f5-35f6-4d8e-9cb9-ddc046c8be2b)
+
+Es la función encargada de obtener los platos por categorías directo desde la API.
+
+![image](https://github.com/user-attachments/assets/27b6e805-1722-4d48-a331-899aec312eda)
+
+Es la función encargada de mostrar los platos por categorías obtenidas directo desde la API.
+
+3. http://localhost:8000/menus/menus/52767/
+
+![image](https://github.com/user-attachments/assets/c73a6f63-9582-44a9-82ef-b90bc985fa24)
+
+![image](https://github.com/user-attachments/assets/df802a26-b31e-4b78-8cb2-f9a1a8350123)
+
+![image](https://github.com/user-attachments/assets/6dc99177-e414-444e-841d-de33440b4305)
+
+En este apartado se pueden observar datos específicos de los platos dentro de la categoría seleccionada como lo son:
+- Detalles del Plato.
+- Ingredientes.
+- Instrucciones
+
+![image](https://github.com/user-attachments/assets/2c284fc3-7495-4110-b7a2-43fe9ed4e684)
+
+Es la función encargada de obtener los detalles de los platos por categorías directo desde la API.
+
+![image](https://github.com/user-attachments/assets/bc9f932e-0745-4a5b-9ef6-cc46f28ceb54)
+
+Es la función encargada de mostrar los detalles de los platos por categorías obtenidas directo desde la API.
+
+## ExchangeRate
+1. http://localhost:8000/convertir/
+
+![image](https://github.com/user-attachments/assets/b7ba25e5-fd9e-4450-b6a9-c643b037812e)
+
+En este apartado se pueden realizar la conversión de divisas seleccionando una moneda de origen y una de destino e ingresando la cantidad a convertir.
+
+![image](https://github.com/user-attachments/assets/76b59bce-4da5-4f58-9f2e-ba19d48641f5)
+![image](https://github.com/user-attachments/assets/2da52b33-3e96-4529-9ffb-caba2fae1259)
+
+Formulario para poder seleccionar la moneda de origen y destino.
+Se pueden añadir monedas de todos estos [países soportados](https://v6.exchangerate-api.com/v6/fc09d92b0875c138029afc21/latest/USD) por el API.
+
+El API funciona mandando la solicitud para obtener la tasa de cambio mediante el código de la moneda, por ejemplo 'USD' que sería el Dólar Estadounidense.
+
+![image](https://github.com/user-attachments/assets/d2953d95-978d-457d-a461-d68cedc379e0)
+
+Función encargada de obtener las tasas de cambio de las monedas directo desde la API.
+
+![image](https://github.com/user-attachments/assets/51e173a1-50a7-40c6-939e-78803ff0e03d)
+
+Función encargada de convertir las monedas y mostrar el apartado de conversión de divisas.
+
+- Ejemplo de Conversión:
+
+![image](https://github.com/user-attachments/assets/fa69b9ac-e4ee-44b3-ae2b-744fbef38a6f)
+
+En el ejemplo se puede visualizar como se convierte la moneda de origen USD "Dólar Estadounidense" con 100 de cantidad a la moneda de destino CLP "Peso Chileno" y se muestra en el Resultado final de 98295,74 CLP.
